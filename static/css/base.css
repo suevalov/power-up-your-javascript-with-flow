@@ -772,7 +772,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Roboto", "San Francisco", helvetica, arial, sans-serif;
+  font-family: "Lato", "San Francisco", helvetica, arial, sans-serif;
   font-size: 62.5%;
 }
 
@@ -937,7 +937,7 @@ padding: .4rem .8rem;
 }
 /* -- Serif -- */
 .text-serif, h1 span {
-  font-family: "Maitree", times, serif;
+  font-family: times, serif;
 
 }
 
@@ -2806,7 +2806,7 @@ blockquote p {
 }
 
 .bg-apple blockquote p {
-  font-family: "San Francisco", "Roboto", helvetica, arial, sans-serif;
+  font-family: "San Francisco", "Lato", helvetica, arial, sans-serif;
   font-weight: 300;
 }
 

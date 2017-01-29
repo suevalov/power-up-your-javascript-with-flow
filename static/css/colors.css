@@ -171,6 +171,10 @@ Slides - Backgrounds <section class="bg-primary">
   background-color: #fff;
 }
 
+.bg-light-blue {
+  background-color: rgb(169, 236, 248);
+}
+
 /* BG Apple Keynote*/
 
 .bg-apple {
