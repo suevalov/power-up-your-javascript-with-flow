@@ -1,9 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+// @flow
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+import express from 'express'
+
+const app = express()
+
+app.get();
