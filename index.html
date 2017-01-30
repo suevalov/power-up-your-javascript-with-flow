@@ -21,6 +21,7 @@
 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
     <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+    <link rel='stylesheet' type='text/css' media='all' href='static/css/custom.css'>
 
     <!-- SOCIAL CARDS (ADD YOUR INFO) -->
 
@@ -56,23 +57,104 @@
     <main role="main">
       <article id="webslides">
 
-        <section class="bg-black">
+        <!-- Intro  -->
+        <section class="bg-green flow-intro">
           <span class="background dark" style="background-image:url('static/images/code.jpg')"></span>
-          <!--.wrap = container 1200px -->
-          <div class="wrap aligncenter">
-            <h1><strong>Power-Up your JavaScript <br />with Flow</strong></h1>
-            <p class="text-intro"></p>
+          <div class="wrap aligncenter size-60">
+            <h1>
+              Power-Up your JavaScript
+              <br/>
+              with Flow
+            </h1>
           </div>
-          <!-- .end .wrap -->
+          <div class="wrap aligncenter">
+              <div class="flow-intro__presentation-link">  
+                <a href="http://suevalov.com/presentations/flow">
+                  http://suevalov.com/presentations/flow
+                </a>
+              </div>
+            <div class="suevalov">
+              <img src='static/images/suevalov.png' />
+              <div><a href="http://twitter.com/suevalov" target="__blank">@suevalov</a></div>
+            </div>
+          </div>
         </section>
 
-        <section class="bg-light-blue">
-          <!--.wrap = container 1200px -->
-          <div class="wrap aligncenter">
-            <h1><strong>Power-Up your JavaScript <br />with Flow</strong></h1>
-            <p class="text-intro"></p>
+
+        <section class="bg-black-blue">
+          <div class="wrap size-50">
+            <h2>The language we
+              <svg class="fa-heart-o">
+                <use xlink:href="#fa-heart-o"></use>
+              </svg>
+              so much
+            </h2>
+            <pre style='margin-top: 50px;'>
+[] + [] <span class="code-comment">// ''</span>
+[] + {} <span class="code-comment">// [object Object]</span>
+{} + [] <span class="code-comment">// 0</span>
+{} + {} <span class="code-comment">// NaN</span>
+
+true + true === 2 <span class="code-comment">// true</span>
+true - true === 0 <span class="code-comment">// true</span>
+true === 1 <span class="code-comment">// false</span>
+</pre>
           </div>
-          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white">
+          <div class="wrap aligncenter">
+              <h1 style="background-color: #FFF;">
+                Static vs. Dynamic
+              </h1>
+              <img src="static/images/dynamic-static.jpg" style="width:50%;"/>                
+          </div>
+        </section>
+
+        <section class="bg-black-blue">
+            <div class="wrap aligncenter">
+              <img src="static/images/why-dont-we-have-both.gif" width="80%" />
+            </div>
+        </section>
+
+        <section class="bg-white">
+          <div class="wrap aligncenter">
+            <h2>Gradual typing in JavaScript</h2>
+            <div class="grid vertial-align">
+              <div class="column" style="flex-direction: row-reverse;">
+                  <img src="static/images/flow.png" width="400" height="400" />
+              </div>
+              <div class="column">
+                  <img src="static/images/ts.png" width="300" height="300" style="margin-top: 50px" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black-blue">
+            <span class="background dark" style="background-image:url('static/images/screaming.jpg')"></span>
+            <div class="wrap">
+              <h4 class="console-error">
+                Uncaught TypeError: Cannot read property "call" of undefined!
+              </h4>
+            </div>
+        </section>
+
+        <section class="bg-black-blue">
+          <div class="wrap">
+            <a href="https://flowtype.org/try/" target="__blank" class="button ghost" title="Try flow">Open example ›</a>
+          </div>
+        </section>
+
+        <section class="bg-black">
+          <div class="wrap">
+            <div class="grid vertial-align">
+              <div class="column">
+                  <img src="static/images/flow.png" width="400" height="400" />
+              </div>
+              <div class="column"></div>
+            </div>
+          </div>
         </section>
 
       </article>
@@ -82,6 +164,7 @@
     <!-- jQuery (required for slides to work) -->
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="static/js/webslides.js"></script>
+    <script src="static/js/custom.js"></script>
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
     <script defer src="static/js/svg-icons.js"></script>

@@ -157,7 +157,7 @@ Slides - Backgrounds <section class="bg-primary">
   background-color: #d5d9e2;
 }
 .bg-green {
-  background-color: #077;
+  background-color: #3E675D;
 }
 .bg-purple {
   background-color: #62b;
@@ -196,7 +196,7 @@ Slides - Backgrounds <section class="bg-primary">
 .bg-blue,
 .bg-green,.bg-purple,.bg-red,.bg-facebook,.bg-apple,[class*="bg-black"],[class*="bg-gradient-"] {
   color: #fff;
-  text-shadow: 0 1px 0 #013;
+  text-shadow: none;
 }
 
 .bg-light p {
