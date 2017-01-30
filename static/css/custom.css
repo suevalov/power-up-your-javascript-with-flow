@@ -11,10 +11,15 @@
     font-size: 2.5rem;
 }
 
+.external-link {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 
 .console-error {
     background-color: #FFF0F0;
-    border: 2px solid #FFE1E1;
+    border: 5px solid #FFE1E1;
     color: #FF2A2A;
     padding: 20px;
     font-family: 'Cousine', monospace;

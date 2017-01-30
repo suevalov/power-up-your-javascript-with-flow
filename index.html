@@ -23,6 +23,8 @@
     <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
     <link rel='stylesheet' type='text/css' media='all' href='static/css/custom.css'>
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/zenburn.min.css">
+
     <!-- SOCIAL CARDS (ADD YOUR INFO) -->
 
     <!-- FACEBOOK -->
@@ -61,11 +63,11 @@
         <section class="bg-green flow-intro">
           <span class="background dark" style="background-image:url('static/images/code.jpg')"></span>
           <div class="wrap aligncenter size-60">
-            <h1>
+            <h2>
               Power-Up your JavaScript
               <br/>
               with Flow
-            </h1>
+            </h2>
           </div>
           <div class="wrap aligncenter">
               <div class="flow-intro__presentation-link">  
@@ -90,14 +92,14 @@
               so much
             </h2>
             <pre style='margin-top: 50px;'>
-[] + [] <span class="code-comment">// ''</span>
-[] + {} <span class="code-comment">// [object Object]</span>
-{} + [] <span class="code-comment">// 0</span>
-{} + {} <span class="code-comment">// NaN</span>
+            <code class="javascript">[] + [] // ''
+[] + {} // [object Object]
+{} + [] // 0
+{} + {} // NaN
 
-true + true === 2 <span class="code-comment">// true</span>
-true - true === 0 <span class="code-comment">// true</span>
-true === 1 <span class="code-comment">// false</span>
+true + true === 2 // true
+true - true === 0 // true
+true === 1 // false</code>
 </pre>
           </div>
         </section>
@@ -111,17 +113,11 @@ true === 1 <span class="code-comment">// false</span>
           </div>
         </section>
 
-        <section class="bg-black-blue">
-            <div class="wrap aligncenter">
-              <img src="static/images/why-dont-we-have-both.gif" width="80%" />
-            </div>
-        </section>
-
-        <section class="bg-white">
+        <section class="bg-apple">
           <div class="wrap aligncenter">
             <h2>Gradual typing in JavaScript</h2>
             <div class="grid vertial-align">
-              <div class="column" style="flex-direction: row-reverse;">
+              <div class="column" style="flex-direction: row-reverse">
                   <img src="static/images/flow.png" width="400" height="400" />
               </div>
               <div class="column">
@@ -132,28 +128,191 @@ true === 1 <span class="code-comment">// false</span>
         </section>
 
         <section class="bg-black-blue">
-            <span class="background dark" style="background-image:url('static/images/screaming.jpg')"></span>
-            <div class="wrap">
-              <h4 class="console-error">
-                Uncaught TypeError: Cannot read property "call" of undefined!
-              </h4>
+          <div class="wrap aligncenter">
+            <div class="grid">
+              <div class="column" style="flex-direction: row-reverse">
+                  <img src="static/images/flow.png"/>
+              </div>
+              <div class="column" style="justify-content: center">
+                <h2>Static Type Checker for JavaScript</h2>
+                <p class="text-intro fadeInUp slow">...that keeps your sanity</p>
+              </div>
             </div>
-        </section>
-
-        <section class="bg-black-blue">
-          <div class="wrap">
-            <a href="https://flowtype.org/try/" target="__blank" class="button ghost" title="Try flow">Open example ›</a>
           </div>
         </section>
 
-        <section class="bg-black">
-          <div class="wrap">
-            <div class="grid vertial-align">
-              <div class="column">
-                  <img src="static/images/flow.png" width="400" height="400" />
-              </div>
-              <div class="column"></div>
+        <section class="bg-black-blue">
+          <div class="wrap size-70">
+            <pre style='margin-top: 50px;'><code class="javascript">function area (r) {
+  return Math.PI * r * r
+}
+
+const result = area("1O");
+</code></pre>
+          </div>
+        </section>
+
+        <section class="bg-black-blue">
+          <div class="wrap size-70">
+            <pre style='margin-top: 50px;'><code class="javascript">// @flow
+              
+function area (r) {
+  return Math.PI * r * r
+}
+
+const result = area("1O");
+                   <span style="color: red;">x</span> ^^^^ This type is incompatible with number.
+</code></pre>
+          </div>
+        </section>
+
+
+        <section class="bg-black-blue">
+          <div class="wrap size-70">
+            <pre style='margin-top: 50px;'><code class="javascript">function length (value) {
+  return value.length
+}
+
+const result = length(null);
+</code></pre>
+          </div>
+        </section>
+
+
+        <section class="bg-black-blue">
+          <div class="wrap size-70">
+            <pre style='margin-top: 50px;'><code class="javascript">// @flow
+
+function length (value) {
+  return value.length
+              <span style="color: red;">x</span> ^^ property `length`. Property cannot be accessed on possibly null value
+}
+
+const result = length(null);
+</code></pre>
+          </div>
+          <a class="button ghost external-link" href="https://flowtype.org/try/#0PTAEAEDMBsHsHcBQoWrWxkCuA7AxgC4CWsOo0ApjgOYEAWoAFAG4CG0WFAlKAN7KgAThQJZBZNhwoA6SjXqIAvokR5SAZwJCK6rNC0BeclVp1GOPdC4BuIA" target="__blank">
+                See in action ›
+          </a>
+        </section>
+
+
+        <section class="bg-black-blue">
+          <div class="wrap size-70">
+            <pre style='margin-top: 50px;'><code class="javascript">// @flow
+
+function length (value) {
+  if (value !== null) {
+    return value.length
+  }
+  return 0;
+}
+
+const result = length(null);
+</code></pre>
+          </div>
+          <a 
+            class="button ghost external-link"
+            target="__blank"
+            href="https://flowtype.org/try/#0PTAEAEDMBsHsHcBQoWrWxkCuA7AxgC4CWsOo0ApjgOYEAWoAFAG4CG0WFAlKAN7KgikJmw4VQAQgC8U0DizRoPfgEgUAJwoEs6sqM4A6SjXoBuAQF8Bm7btAAGc1cR5SAZwKhNbhZ9nHaOkZ5RS5TIA"
+          >
+                See in action ›
+          </a>
+        </section>
+
+        <section class="bg-black-blue">
+          <div class="wrap size-70 aligncenter">
+            <h3>Changes break applications</h3>
+            <pre style='margin-top: 30px;'><code class="javascript">// @flow
+
+function showModal(params) {
+  console.log(params.title);
+  console.log(params.content);
+}
+
+function sayHello (user) {
+  showModal({
+    title: `Hello, ${user.name} ${user.surname}!`,
+    content: 'Welcome to our site!'
+  })
+}
+</code></pre>
+          </div>
+            <a 
+              class="button ghost external-link"
+              target="__blank"
+              href="https://flowtype.org/try/#0PTAEAEDMBsHsHcBQjIFcB2BjALgS1uqAM4AWCAsrACYCG0AFAA40BONAtkQJSgDeioUJgJFY0AKYA6OAHMmrDkUl5sErgG4BQkWKmz5bTpOHps40xsQBfZGix4CxGgE8AEuOhx6qIuJY9+QVIKajp6QMFQFQkALlAAIndPWAAaBNAAalAfP0l0DnFM9PiinJZJIlQWfPZCrPiAQniUrUETM1M4gHIAdQ9hWqjYUFgq4lwzBq6tKy5rIA"
+            >
+                  See in action ›
+            </a>
+        </section>
+
+        <section class="bg-black-blue">
+            <span class="background" style="background-image:url('static/images/screaming.jpg')"></span>
+            <div class="wrap">
+              <h4 class="console-error">
+                Uncaught TypeError: Cannot read property "name" of undefined!
+              </h4>
             </div>
+        </section>
+        
+        <section class="bg-white">
+          <div class="wrap aligncenter">
+            <h1>Quick intro into syntax</h1>
+            <img src="static/images/flow-syntax.png" />
+          </div>
+        </section>
+
+        <section class="bg-black-blue">
+          <div class="wrap aligncenter">
+            <h1>Basic types</h1>
+            <ul class="flexblock features">
+              <li>
+                <div>
+                  <h2>boolean</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>number</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>string</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>null</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>void</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Array</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Object</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>any</h2>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Function</h2>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -163,8 +322,10 @@ true === 1 <span class="code-comment">// false</span>
 
     <!-- jQuery (required for slides to work) -->
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="static/js/webslides.js"></script>
     <script src="static/js/custom.js"></script>
+    
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
     <script defer src="static/js/svg-icons.js"></script>

@@ -117,9 +117,12 @@ pre:hover {
 code,[class*="bg-"] pre {
   background-color: rgba(255, 255, 255, 0.09);
 }
+pre code.hljs {
+  background-color: transparent !important;
+}
 
 .bg-white code{
-    background: rgba(0, 20, 80, 0.03);
+    background: rgba(255, 255, 255, 0.09);
 }
 /*================================================
 Slides - Backgrounds <section class="bg-primary">
